@@ -44,4 +44,5 @@ if __name__ == '__main__':
         .filter(lambda rec: rec[0][0] == rec[1][0])  \
         .filter(lambda rec: (rec[0][3] == "Switzerland") and (rec[1][1]) and (rec[1][2]))
 
-    join_pair_rdd.repartition(1000).foreach(print)
+    join_pair_rdd.foreach(print)
+
